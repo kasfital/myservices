@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Integrales - Soluciones Técnicas & Digitales</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-amber: #f59e0b;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-main);
+        }
+
+        .btn-action {
+            display: block;
+            text-align: center;
+            background-color: var(--accent-blue);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 0.6rem;
+            border-radius: 6px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .electricidad { border-left: 4px solid var(--accent-amber); }
+        .electricidad .btn-action { background-color: var(--accent-amber); }
+        
+        .software { border-left: 4px solid var(--accent-blue); }
+        .software .btn-action { background-color: var(--accent-blue); color: #fff; }
+
+        .ajedrez { border-left: 4px solid var(--accent-red); }
+        .ajedrez .btn-action { background-color: var(--accent-red); color: #fff; }
+
+        .delivery { border-left: 4px solid var(--accent-green); }
+        .delivery .btn-action { background-color: var(--accent-green); color: #fff; }
+
+        #vakco-marketplace {
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin: 1rem 0 1rem 0;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .restaurant-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .rest-item {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .rest-info h3 {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+
+        .rest-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 0.5rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu-items {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed rgba(255,255,255,0.1);
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .menu-product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.2);
+            padding: 0.6rem;
+            border-radius: 6px;
+        }
+
+        .prod-detail span {
+            display: block;
+            font-size: 0.85rem;
+        }
+
+        .prod-detail .price {
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 0.1rem;
+        }
+
+        .btn-order-prod {
+            background-color: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="profile-img">🛠️</div>
+            <h1>Soluciones Técnicas & Digitales</h1>
+            <p>Guayaquil, Ecuador • Disponibilidad Inmediata</p>
+        </header>
+
+        <!-- Tarjeta 1: Electricidad -->
+        <div class="card electricidad">
+            <div class="card-header">
+                <span class="icon">⚡</span>
+                <span class="card-title">Servicio Técnico Electricista</span>
+            </div>
+            <p class="card-desc">Solución de cortocircuitos, fallas de luz, reemplazo de breakers, tomacorrientes quemados y tableros eléctricos residenciales o comerciales.</p>
+            <div class="tags">
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Urgencias</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">A Domicilio</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Garantizado</a>
+            </div>
+            <a href="https://wa.me" class="btn-action" target="_blank">Solicitar Electricista</a>
+        </div>
+
+        <!-- Tarjeta 2: Sistemas y Web -->
+        <div class="card software">
+            <div class="card-header">
+                <span class="icon">💻</span>
+                <span class="card-title">Desarrollo Web y Sistemas</span>
+            </div>
+            <p class="card-desc">Diseño de páginas web profesionales, sistemas de inventario para negocios y comandas digitales personalizadas para restaurantes.</p>
+            <div class="tags">
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Páginas Web</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Sistemas</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Negocios</a>
+            </div>
+            <a href="https://wa.me" class="btn-action" target="_blank">Cotizar Proyecto</a>
+        </div>
+
+        <!-- Tarjeta 3: Ajedrez -->
+        <div class="card ajedrez">
+            <div class="card-header">
+                <span class="icon">♟️</span>
+                <span class="card-title">Clases de Ajedrez</span>
+            </div>
+            <p class="card-desc">Clases de Ajedrez (Todas las edades) para principiantes. Fundamentos, reglas básicas y desarrollo del pensamiento lógico desde cero.</p>
+            <div class="tags">
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Niños y Adultos</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Desde Cero</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Estrategia</a>
+            </div>
+            <a href="https://wa.me" class="btn-action" target="_blank">Pedir Información</a>
+        </div>
+
+        <!-- Tarjeta 4: Delivery -->
+        <div class="card delivery">
+            <div class="card-header">
+                <span class="icon">🏍️</span>
+                <span class="card-title">Servicio de Delivery Directo</span>
+            </div>
+            <p class="card-desc">Servicio de transporte y logística express adaptado para comercios y clientes finales. Entregas directas, rápidas y sin intermediarios.</p>
+            <div class="tags">
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Clientes Finales</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Restaurantes</a>
+                <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Comercios</a>
+            </div>
+            <button class="btn-action" onclick="toggleMarketplace()">Ver restaurantes</button>
+        </div>
+
+        <!-- Sección de Restaurantes vakco Marketplace -->
+        <div id="vakco-marketplace" style="display: none;">
+            <h2 class="section-title">🍔 Red vakco Express</h2>
+            <div class="restaurant-list">
+                
+                <!-- Restaurante 1 -->
+                <div class="rest-item">
+                    <div class="rest-info">
+                        <h3>Burger & Carbón Express</h3>
+                        <p>Las mejores hamburguesas artesanales de la zona.</p>
+                    </div>
+                    <button class="menu-toggle" onclick="toggleMenu('menu1')">Ver Menú Disponible</button>
+                    <div class="menu-items" id="menu1">
+                        <div class="menu-product">
+                            <div class="prod-detail">
+                                <span>Súper Burger Doble Carne + Papas</span>
+                                <span class="price">$5.50</span>
+                            </div>
+                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+                        </div>
+                        <div class="menu-product">
+                            <div class="prod-detail">
+                                <span>Monster Burger Suprema</span>
+                                <span class="price">$7.00</span>
+                            </div>
+                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurante 2 -->
+                <div class="rest-item">
+                    <div class="rest-info">
+                        <h3>El Rey de la Salchipapa</h3>
+                        <p>Harta papa, full cremas y embutidos seleccionados.</p>
+                    </div>
+                    <button class="menu-toggle" onclick="toggleMenu('menu2')">Ver Menú Disponible</button>
+                    <div class="menu-items" id="menu2">
+                        <div class="menu-product">
+                            <div class="prod-detail">
+                                <span>Salchipapa Especial (Pollo + Carne)</span>
+                                <span class="price">$4.50</span>
+                            </div>
+                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurante 3 -->
+                <div class="rest-item">
+                    <div class="rest-info">
+                        <h3>Shawarma El Árabe</h3>
+                        <p>Shawarmas de pollo, carne y mixtos con salsa especial.</p>
+                    </div>
+                    <button class="menu-toggle" onclick="toggleMenu('menu3')">Ver Menú Disponible</button>
+                    <div class="menu-items" id="menu3">
+                        <div class="menu-product">
+                            <div class="prod-detail">
+                                <span>Shawarma Mixto Gigante</span>
+                                <span class="price">$3.50</span>
+                            </div>
+                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer>
+            <p>© 2026 • vakco Platform Ecosystem</p>
+        </footer>
+    </div>
+
+    <script>
+        const WHATSAPP_NUMBER = "593962043878"; 
+
+        function toggleMarketplace() {
+            const market = document.getElementById('vakco-marketplace');
+            if (market.style.display === "block") {
+                market.style.display = "none";
+            } else {
+                market.style.display = "block";
+                market.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+
+        function orderProduct(restaurant, product, price) {
+            var msg = "Hola! Quiero pedir por vakco Express:\n📍 Local: " + restaurant + "\n🍔 Producto: " + product + "\n💵 Precio: $" + price;
+            window.open("https://wa.me" + encodeURIComponent(msg), "_blank");
+        }
+
+
+
+
+    </script>
+</body>
+</html>
