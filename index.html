@@ -265,7 +265,7 @@
                 <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">A Domicilio</a>
                 <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Garantizado</a>
             </div>
-            <a href="https://wa.me" class="btn-action" target="_blank">Solicitar Electricista</a>
+            <a href="https://whatsapp.com" class="btn-action" target="_blank">Solicitar Electricista</a>
         </div>
 
         <!-- Tarjeta 2: Sistemas y Web -->
@@ -280,7 +280,7 @@
                 <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Sistemas</a>
                 <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Negocios</a>
             </div>
-            <a href="https://wa.me" class="btn-action" target="_blank">Cotizar Proyecto</a>
+            <a href="https://whatsapp.com" class="btn-action" target="_blank">Cotizar Proyecto</a>
         </div>
 
         <!-- Tarjeta 3: Ajedrez -->
@@ -295,7 +295,7 @@
                 <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Desde Cero</a>
                 <a href="https://wa.me" class="tag" style="text-decoration: none;" target="_blank">Estrategia</a>
             </div>
-            <a href="https://wa.me" class="btn-action" target="_blank">Pedir Información</a>
+            <a href="https://whatsapp.com" class="btn-action" target="_blank">Pedir Información</a>
         </div>
 
         <!-- Tarjeta 4: Delivery -->
@@ -314,73 +314,50 @@
         </div>
 
         <!-- Sección de Restaurantes vakco Marketplace -->
-        <div id="vakco-marketplace" style="display: none;">
-            <h2 class="section-title">🍔 Red vakco Express</h2>
-            <div class="restaurant-list">
+            <div id="vakco-marketplace" style="display: none;">
+                <h2 class="section-title">🍔 Red vakco Express</h2>
                 
-                <!-- Restaurante 1 -->
-                <div class="rest-item">
-                    <div class="rest-info">
-                        <h3>Burger & Carbón Express</h3>
-                        <p>Las mejores hamburguesas artesanales de la zona.</p>
-                    </div>
-                    <button class="menu-toggle" onclick="toggleMenu('menu1')">Ver Menú Disponible</button>
-                    <div class="menu-items" id="menu1">
-                        <div class="menu-product">
-                            <div class="prod-detail">
-                                <span>Súper Burger Doble Carne + Papas</span>
-                                <span class="price">$5.50</span>
-                            </div>
-                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
-                        </div>
-                        <div class="menu-product">
-                            <div class="prod-detail">
-                                <span>Monster Burger Suprema</span>
-                                <span class="price">$7.00</span>
-                            </div>
-                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
-                        </div>
-                    </div>
+                <!-- BARRA DE FILTROS (Categorías Comerciales) -->
+                <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.75rem; margin-bottom: 1rem; width: 100%; scrollbar-width: none;">
+                    <button style="background: var(--accent-green); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; cursor: pointer; white-space: nowrap;" onclick="filterCategory('todos')">Todos</button>
+                    <button style="background: rgba(255,255,255,0.08); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; cursor: pointer; white-space: nowrap;" onclick="filterCategory('pizzerias')">🍕 Pizzerías</button>
+                    <button style="background: rgba(255,255,255,0.08); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; cursor: pointer; white-space: nowrap;" onclick="filterCategory('asaderos')">🍗 Asaderos</button>
+                    <button style="background: rgba(255,255,255,0.08); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; cursor: pointer; white-space: nowrap;" onclick="filterCategory('cevicherias')">🐟 Cevicherías</button>
+                    <button style="background: rgba(255,255,255,0.08); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; cursor: pointer; white-space: nowrap;" onclick="filterCategory('mandados')">🛒 Supermercados y Farmacias</button>
                 </div>
 
-                <!-- Restaurante 2 -->
-                <div class="rest-item">
-                    <div class="rest-info">
-                        <h3>El Rey de la Salchipapa</h3>
-                        <p>Harta papa, full cremas y embutidos seleccionados.</p>
-                    </div>
-                    <button class="menu-toggle" onclick="toggleMenu('menu2')">Ver Menú Disponible</button>
-                    <div class="menu-items" id="menu2">
-                        <div class="menu-product">
-                            <div class="prod-detail">
-                                <span>Salchipapa Especial (Pollo + Carne)</span>
-                                <span class="price">$4.50</span>
+                <div class="restaurant-list">
+                    
+                    <!-- LOCAL 1: PIZZERÍA (Ejemplo real para modificar) -->
+                    <div class="rest-item" data-category="pizzerias">
+                        <div class="rest-info">
+                            <h3>Pizzería Pedrito</h3>
+                            <p>Las mejores pizzas artesanales con ingredientes frescos.</p>
+                        </div>
+                        <button class="menu-toggle" onclick="toggleMenu('menu_pedrito')">Ver Menú Disponible</button>
+                        <div class="menu-items" id="menu_pedrito">
+                            <div class="menu-product">
+                                <div class="prod-detail">
+                                    <span>Combo1: Bolon Mixto + huevo + Jugo Naranja</span>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
                             </div>
-                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
                         </div>
                     </div>
-                </div>
 
-                <!-- Restaurante 3 -->
-                <div class="rest-item">
-                    <div class="rest-info">
-                        <h3>Shawarma El Árabe</h3>
-                        <p>Shawarmas de pollo, carne y mixtos con salsa especial.</p>
-                    </div>
-                    <button class="menu-toggle" onclick="toggleMenu('menu3')">Ver Menú Disponible</button>
-                    <div class="menu-items" id="menu3">
-                        <div class="menu-product">
-                            <div class="prod-detail">
-                                <span>Shawarma Mixto Gigante</span>
-                                <span class="price">$3.50</span>
-                            </div>
-                            <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+                    <!-- LOCAL 2: MANDADOS (Supermercados/Farmacias sin menú digital) -->
+                    <div class="rest-item" data-category="mandados">
+                        <div class="rest-info">
+                            <h3>Mandados y Compras (Tía, Mi Comisariato, Farmacias)</h3>
+                            <p>¿Necesitas víveres, medicinas o compras del súper? Yo hago el mandado por ti.</p>
                         </div>
+                        <a href="https://wa.me:" class="btn-action" style="background-color: var(--accent-green); color: white; margin-top: 0.5rem;" target="_blank">📲 Solicitar Mandado Express</a>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
+
 
 
         <footer>
@@ -416,7 +393,24 @@
         }
 
 
-        
+        function filterCategory(category) {
+            const items = document.querySelectorAll('.rest-item');
+            items.forEach(item => {
+                if (category === 'todos' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+    
+            // Cambiar color visual del botón seleccionado
+            const buttons = event.target.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => btn.style.background = 'rgba(255,255,255,0.08)');
+            event.target.style.background = 'var(--accent-green)';
+        }
+
+
+
 
 
     </script>
