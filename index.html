@@ -80,10 +80,62 @@
             <a href="restaurantes/pedrito.html" class="btn-action">Ver menú de Pedrito</a>
         </div>
 
-        <footer>
+     <footer>
             <p>© 2026 • vakco Platform Ecosystem</p>
         </footer>
+                </div>
+            </div>
+
     </div>
 
+    <script>
+        const WHATSAPP_NUMBER = "593962043878"; 
+
+        function toggleMarketplace() {
+            const market = document.getElementById('vakco-marketplace');
+            if (market.style.display === "block") {
+                market.style.display = "none";
+            } else {
+                market.style.display = "block";
+                market.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+
+        function orderProduct(restaurant, product, price) {
+            var msg = "Hola! Quiero pedir por vakco Express:\n📍 Local: " + restaurant + "\n🍔 Producto: " + product + "\n💵 Precio: $" + price;
+            window.open("https://wa.me" + encodeURIComponent(msg), "_blank");
+        }
+
+
+        function filterCategory(category) {
+            const items = document.querySelectorAll('.rest-item');
+            items.forEach(item => {
+                if (category === 'todos' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+    
+            // Cambiar color visual del botón seleccionado
+            const buttons = event.target.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => btn.style.background = 'rgba(255,255,255,0.08)');
+            event.target.style.background = 'var(--accent-green)';
+        }
+
+
+
+
+
+    </script>
 </body>
 </html>
