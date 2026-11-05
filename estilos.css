@@ -278,11 +278,22 @@
             }
             
             /* Separa verticalmente las tarjetas de los restaurantes para que no se peguen */
+            /* Corrección del contenedor general */
             .restaurant-list {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem !important; /* Fuerza el espacio vertical entre locales */
+                display: block; /* Cambiamos flex por block para evitar que los elementos ocultos dejen huecos */
                 margin-top: 1.5rem;
             }
+            
+            /* Forzamos a que cada tarjeta individual maneje su propia separación hacia abajo */
+            .restaurant-list .rest-item, 
+            .restaurant-list [data-category] {
+                margin-bottom: 1.5rem !important; /* Cada tarjeta empuja a la siguiente solo si está visible */
+            }
+            
+            /* Evitamos que la última tarjeta visible deje un espacio exagerado antes del footer */
+            .restaurant-list .rest-item:last-of-type {
+                margin-bottom: 0 !important;
+            }
+
 
     
