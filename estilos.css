@@ -247,3 +247,25 @@
             font-size: 0.75rem;
             color: var(--text-muted);
         }
+
+        .btn-back-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1e293b; /* Fondo oscuro elegante */
+            color: #4df !important; /* Azul celeste brillante */
+            padding: 8px 16px;
+            border-radius: 20px; /* Bordes redondeados de categoría */
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid #334155;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+            .btn-back-badge:hover {
+                background-color: #4df;
+                color: #0f172a !important; /* Invierte colores al pasar el mouse */
+        }
+    
