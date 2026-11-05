@@ -268,4 +268,21 @@
                 background-color: #4df;
                 color: #0f172a !important; /* Invierte colores al pasar el mouse */
         }
+
+        /* Recupera el diseño y añade un respiro arriba al deslizar la pantalla */
+            .marketplace-wrapper {
+                display: block;
+                padding-top: 0.5rem;
+                padding-bottom: 2rem;
+                scroll-margin-top: 20px; /* Evita que el título quede pegado al borde del celular */
+            }
+            
+            /* Separa verticalmente las tarjetas de los restaurantes para que no se peguen */
+            .restaurant-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem !important; /* Fuerza el espacio vertical entre locales */
+                margin-top: 1.5rem;
+            }
+
     
