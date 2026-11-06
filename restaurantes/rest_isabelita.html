@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parrillada Rest. Isabelita - Red vakco Express</title>
+    
+    <link rel="stylesheet" href="../estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Botón para regresar a los servicios -->
+      <a href="../index.html#barra-categorias" class="btn-back-badge">
+        <i class="fas fa-arrow-left"></i> Volver a Restaurantes
+      </a>
+
+      <header style="text-align: left; margin-bottom: 1.5rem">
+        <h1 style="color: var(--accent-green)">🟢 Parrillada Isabelita</h1>
+        <p>Parrilladas, Moros, Caldos, Secos </p>
+      </header>
+
+      <h2 class="section-title">🍽️ Menú Completo disponible</h2>
+
+      <!-- AM 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>AM1: Arroz Menestra y Chorizo</span>
+          <span class="price">$6.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- AM 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>AM2: Arroz Menestra y Carne</span>
+          <span class="price">$6.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- AM 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>AM3: Arroz Menestra y Pollo</span>
+          <span class="price">$7.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- AM 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>AM4: Arroz Menestra y Chuleta</span>
+          <span class="price">$8.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- AM 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>AM5: Arroz Menestra y Costilla</span>
+          <span class="price">$10.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- AM 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>AM6: Arroz Menestra y Costilla BBQ</span>
+          <span class="price">$10.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MORO 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MORO1: Moro y Chorizo</span>
+          <span class="price">$6.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MORO 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MORO2: Moro y Carne</span>
+          <span class="price">$6.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MORO 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MORO3: Moro y Pollo</span>
+          <span class="price">$6.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MORO 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MORO4: Moro y Chuleta</span>
+          <span class="price">$7.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MORO 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MORO5: Moro y Costilla</span>
+          <span class="price">$9.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MORO 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MORO6: Moro y Costilla BBQ</span>
+          <span class="price">$10.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MN 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MN1: Moronestra y Chorizo</span>
+          <span class="price">$7.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MN 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MN2: Moronestra y Carne</span>
+          <span class="price">$7.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MN 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MN3: Moronestra y Pollo</span>
+          <span class="price">$7.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MN 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MN4: Moronestra y Chuleta</span>
+          <span class="price">$8.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MN 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MN5: Moronestra y Costilla</span>
+          <span class="price">$10.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MN 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MN6: Moronestra y Costilla BBQ</span>
+          <span class="price">$11.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MENSA 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MENSA1: Moro Ensalada y Chorizo</span>
+          <span class="price">$7.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MENSA 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MENSA2: Moro Ensalada y Carne</span>
+          <span class="price">$7.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MENSA 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MENSA3: Moro Ensalada y Pollo</span>
+          <span class="price">$7.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MENSA 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MENSA4: Moro Ensalada y Chuleta</span>
+          <span class="price">$8.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MENSA 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MENSA5: Moro Ensalada y Costilla</span>
+          <span class="price">$10.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- MENSA 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>MENSA6: Moro Ensalada y Costilla BBQ</span>
+          <span class="price">$11.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DIETA 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DIETA1: Dieta Chorizo</span>
+          <span class="price">$6.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DIETA 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DIETA2: Dieta Carne</span>
+          <span class="price">$6.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DIETA 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DIETA3: Dieta Pollo</span>
+          <span class="price">$7.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DIETA 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DIETA4: Dieta Chuleta</span>
+          <span class="price">$8.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DIETA 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DIETA5: Dieta Costilla</span>
+          <span class="price">$10.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DIETA 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DIETA6: Dieta Costilla BBQ</span>
+          <span class="price">$10.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI1: Seco de Gallina</span>
+          <span class="price">$7.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI2: Seco de Chivo</span>
+          <span class="price">$7.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI3: Caldo de Gallina</span>
+          <span class="price">$6.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI4: Caldo de Pata</span>
+          <span class="price">$6.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI5: Milanesa de Carne</span>
+          <span class="price">$7.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI6: Milanesa de Pollo</span>
+          <span class="price">$7.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- TIPI 7 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>TIPI7: Churrasco</span>
+          <span class="price">$8.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Parri 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Parri1: Parrillada Sencilla</span>
+          <span class="price">$19.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Parri 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Parri2: Parrillada Mediana</span>
+          <span class="price">$25.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Parri 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Parri3: Parrillada Familiar</span>
+          <span class="price">$35.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 1 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci1: Porcion de Pollo</span>
+          <span class="price">$4.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 2 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci2: Porcion de Carne</span>
+          <span class="price">$4.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 3 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci3: Porcion de Chorizo</span>
+          <span class="price">$4.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 4 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci4: Porcion de Chuleta</span>
+          <span class="price">$5.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 5 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci5: Porcion de Costilla</span>
+          <span class="price">$6.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 6 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci6: Porcion de Costilla BBQ</span>
+          <span class="price">$7.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 7 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci7: Porcion de Patacones</span>
+          <span class="price">$2.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 8 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci8: Porcion de Patacones con Queso</span>
+          <span class="price">$3.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div> 
+
+      <!-- Porci 9 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci9: Porcion de Chivo</span>
+          <span class="price">$5.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 10 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci10: Medio Seco de Chivo</span>
+          <span class="price">$4.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 11 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci11: Porcion de Pata</span>
+          <span class="price">$3.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 12 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci12: Medio Caldo de Pata</span>
+          <span class="price">$4.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 13 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci13: Porcion de Arroz blanco</span>
+          <span class="price">$1.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 14 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci14: Media Porcion de Arroz blanco</span>
+          <span class="price">$0.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 15 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci15: Porcion de Moro</span>
+          <span class="price">$2.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 16 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci16: Porcion de Moronestra</span>
+          <span class="price">$3.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 17 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci17: Porcion de Menestra</span>
+          <span class="price">$2.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 18 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci18: Porcion de 1/2 Lit. Menestra</span>
+          <span class="price">$2.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 19 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci19: Porcion de 1 Lit. Menestra</span>
+          <span class="price">$5.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 20 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci20: Porcion de Salsa de Queso</span>
+          <span class="price">$1.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 21 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci21: Porcion de Chimichurry</span>
+          <span class="price">$1.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 22 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci22: Porcion de Chimichurry Argentino</span>
+          <span class="price">$1.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 23 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci23: Porcion de Ensalada</span>
+          <span class="price">$2.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- Porci 24 -->
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>Porci24: 1/2 Porcion de Ensalada</span>
+          <span class="price">$1.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- BEBIDAS -->
+      <!-- DRINK1 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK1: Agua Splendor 750 ml</span>
+          <span class="price">$1.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK2 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK2: Agua Splendor 500 ml</span>
+          <span class="price">$0.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK3 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK3: Agua Dasani</span>
+          <span class="price">$0.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK4 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK4: Agua All Natural</span>
+          <span class="price">$0.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK5 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK5: Agua con Gas</span>
+          <span class="price">$1.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK6 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK6: Agua Imperial</span>
+          <span class="price">$1.25</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK7 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK7: Nestea 1/2 lit.</span>
+          <span class="price">$1.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK8 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK8: Nestea 1 lit.</span>
+          <span class="price">$2.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK9 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK9: Nestea 1.5 lit.</span>
+          <span class="price">$2.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK10 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK10: Cola 1.35 lit.</span>
+          <span class="price">$2.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK11 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK11: Cola 2 lit.</span>
+          <span class="price">$3.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK12 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK12: Coca Cola personal</span>
+          <span class="price">$0.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK13 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK13: Coca Cola 2 lit.</span>
+          <span class="price">$3.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK14 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK14: Coca Cola 3 lit.</span>
+          <span class="price">$5.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK15 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK15: Te de Jamaica</span>
+          <span class="price">$1.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK16 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK16: Forestea 475ml</span>
+          <span class="price">$1.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK17 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK17: Forestea 400ml</span>
+          <span class="price">$1.00</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK18 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK18: Jarra Jugo Grande</span>
+          <span class="price">$6.50</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+      <!-- DRINK19 --> 
+      <div class="menu-product">
+        <div class="prod-detail">
+          <span>DRINK19: Jarra Jugo Pequeña</span>
+          <span class="price">$3.75</span>
+        </div>
+        <a href="https://wa.me" class="btn-order-prod" target="_blank">Pedir</a>
+      </div>
+
+    </div>
+  </body>
+</html>
